@@ -40,4 +40,31 @@ For the testing stage, please run:
 python run_stc.py -f 27 -b 128  --train 0 --layers 6 --reload 1 --previous_dir ./checkpoint/your_best_model.pth
 ```
 
-The pre-trained models and the codes for STCFormer will be released after the review process.
+
+## Evaluating our models
+### Human 3.6M
+
+You can download our pre-trained models from [here](https://pan.baidu.com/s/1axVQNHxdZFH4Eiqiy2EvYQ) (extraction code：STC1). Put them in the ./checkpoint directory.
+
+To evaluate our STCFormer model on the 2D keypoints obtained by CPN, please run:
+```bash
+python run_stc.py -f 27 -b 128  --train 0 --layers 6 -s 1 -k 'cpn_ft_h36m_dbb' --reload 1 --previous_dir ./checkpoint/model_27_STCFormer/no_refine_6_4406.pth
+```
+```bash
+python run_stc.py -f 81 -b 128  --train 0 --layers 6 -s 1 -k 'cpn_ft_h36m_dbb' --reload 1 --previous_dir ./checkpoint/model_81_STCFormer/no_refine_6_4172.pth
+```
+Different models use different configurations as follows.
+
+| Frames | P1 (mm) | P2 (mm) | 
+| ------------- | ------------- | ------------- |
+| 27  | 44.08  | 34.76  |
+| 81  | 41.72 | 32.94  |
+
+Apologies, I am unable to present results at 243 fps at the moment due to GPU and copyright concerns.
+
+### MPI-INF-3DHP
+The pre-trained models and codes for STCFormer are currently undergoing updates. In the meantime, you can run this code, which is based on an earlier version and may lack organization, to observe the results for 81 frames.
+
+```bash
+ python run_3dhp_stc.py --train 0 --frames 81  -b 128  -s 1  --reload 1 --previous_dir ./checkpoint/model_81_STMO/no_refine_8_2310.pth
+```
