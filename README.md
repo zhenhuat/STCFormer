@@ -43,7 +43,7 @@ python run_stc.py -f 27 -b 128  --train 0 --layers 6 -s 1 --reload 1 --previous_
 
 ## Evaluating our models
 
-You can download our pre-trained models from [Google Drive]（https://drive.google.com/drive/folders/1waaQ1Yj-HfbNahnCN8AWCjMCGzyhZJF7?usp=drive_link） and [Baidu Disk](https://pan.baidu.com/s/1axVQNHxdZFH4Eiqiy2EvYQ) (extraction code：STC1). Put them in the ./checkpoint directory.
+You can download our pre-trained models from [Google Drive](https://drive.google.com/drive/folders/1waaQ1Yj-HfbNahnCN8AWCjMCGzyhZJF7?usp=drive_link) or [Baidu Disk](https://pan.baidu.com/s/1axVQNHxdZFH4Eiqiy2EvYQ) (extraction code：STC1). Put them in the ./checkpoint directory.
 
 ### Human 3.6M
 
