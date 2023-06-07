@@ -55,7 +55,7 @@ class opts():
         self.parser.add_argument('--MAE', action='store_true')
         self.parser.add_argument('-tmr','--temporal_mask_rate', type=float, default=0)
         self.parser.add_argument('-smn', '--spatial_mask_num', type=int, default=0)
-        self.parser.add_argument('-tds', '--t_downsample', type=int, default=1)
+        self.parser.add_argument('-tds', '--t_downsample', type=int, default=3)
 
         self.parser.add_argument('--MAE_reload', type=int, default=0)
         self.parser.add_argument('-r', '--resume', action='store_true')
