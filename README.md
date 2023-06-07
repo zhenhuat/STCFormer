@@ -61,7 +61,7 @@ Different models use different configurations as follows.
 | 27  | 44.08  | 34.76  |
 | 81  | 41.72 | 32.94  |
 
-Apologies, I am unable to present results at 243 fps at the moment due to GPU and copyright concerns.
+Since the model with 243-frames input is proprietary and stored exclusively on the company server, it is unavailable due to copyright restrictions. If you require results based on that specific model, I recommend training a similar model internally to achieve the desired outcome.
 
 ### MPI-INF-3DHP
 The pre-trained models and codes for STCFormer are currently undergoing updates. In the meantime, you can run this code, which is based on an earlier version and may lack organization, to observe the results for 81 frames.
