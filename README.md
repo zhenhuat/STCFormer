@@ -42,9 +42,10 @@ python run_stc.py -f 27 -b 128  --train 0 --layers 6 -s 1 --reload 1 --previous_
 
 
 ## Evaluating our models
-### Human 3.6M
 
 You can download our pre-trained models from [here](https://pan.baidu.com/s/1axVQNHxdZFH4Eiqiy2EvYQ) (extraction code：STC1). Put them in the ./checkpoint directory.
+
+### Human 3.6M
 
 To evaluate our STCFormer model on the 2D keypoints obtained by CPN, please run:
 ```bash
