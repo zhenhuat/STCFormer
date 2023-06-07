@@ -72,6 +72,7 @@ The pre-trained models and codes for STCFormer are currently undergoing updates.
 ## Citation
 
 If you find this repo useful, please consider citing our paper:
+
 @inproceedings{tang20233d,
   title={3D Human Pose Estimation With Spatio-Temporal Criss-Cross Attention},
   author={Tang, Zhenhua and Qiu, Zhaofan and Hao, Yanbin and Hong, Richang and Yao, Ting},
