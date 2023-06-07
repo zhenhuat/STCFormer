@@ -73,25 +73,21 @@ The pre-trained models and codes for STCFormer are currently undergoing updates.
 
 If you find this repo useful, please consider citing our paper:
 
-@inproceedings{tang20233d,
-  title={3D Human Pose Estimation With Spatio-Temporal Criss-Cross Attention},
-  author={Tang, Zhenhua and Qiu, Zhaofan and Hao, Yanbin and Hong, Richang and Yao, Ting},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4790--4799},
+@inproceedings{tang20233d,\
+  title={3D Human Pose Estimation With Spatio-Temporal Criss-Cross Attention},\
+  author={Tang, Zhenhua and Qiu, Zhaofan and Hao, Yanbin and Hong, Richang and Yao, Ting},\
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\
+  pages={4790--4799},\
   year={2023}
 }
 
 ## Acknowledgement
 Our code refers to the following repositories.
 
-[VideoPose3D](https://github.com/facebookresearch/VideoPose3D)
-
-[StridedTransformer-Pose3D](https://github.com/Vegetebird/StridedTransformer-Pose3D)
-
-[P-STMO](https://github.com/paTRICK-swk/P-STMO/tree/main)
-
-[MHFormer](https://github.com/Vegetebird/MHFormer)
-
-[MixSTE](https://github.com/JinluZhang1126/MixSTE)
+[VideoPose3D](https://github.com/facebookresearch/VideoPose3D) \
+[StridedTransformer-Pose3D](https://github.com/Vegetebird/StridedTransformer-Pose3D) \
+[P-STMO](https://github.com/paTRICK-swk/P-STMO/tree/main) \
+[MHFormer](https://github.com/Vegetebird/MHFormer) \
+[MixSTE](https://github.com/JinluZhang1126/MixSTE) 
 
 We thank the authors for releasing their codes.
