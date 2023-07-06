@@ -3,7 +3,7 @@ This is the readme file for the code release of "3D Human Pose Estimation with S
 
 ![Alt Text](poster_2M.png)
 
-Thank you for your interest, the code and checkpoints are being updated.
+
 
 ![Alt Text](demo.gif)
 
