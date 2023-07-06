@@ -4,7 +4,6 @@ Thank you for your interest, the code and checkpoints are being updated.
 
 ![Alt Text](demo.gif)
 
-
 ## The released codes include:
     checkpoint/:                        the folder for model weights of STCFormer.
     dataset/:                           the folder for data loader.
