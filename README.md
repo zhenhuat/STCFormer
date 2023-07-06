@@ -1,6 +1,9 @@
 # STCFormer: 3D Human Pose Estimation with Spatio-Temporal Criss-cross Attention [CVPR 2023]
 This is the readme file for the code release of "3D Human Pose Estimation with Spatio-Temporal Criss-cross Attention" on PyTorch platform.
-
+> [**3D Human Pose Estimation with Spatio-Temporal Criss-cross Attention**](https://openaccess.thecvf.com/content/CVPR2023/papers/Tang_3D_Human_Pose_Estimation_With_Spatio-Temporal_Criss-Cross_Attention_CVPR_2023_paper.pdf),         
+> Zhenhua Tang, Zhaofan Qiu, Yanbin Hao, Richang Hong, And Ting Yao,        
+> *In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023*
+> 
 <p align="center"><img src="poster_9M.png" width="100%" alt="" /></p>
 
 Thank you for your interest, the code and checkpoints are being updated.
