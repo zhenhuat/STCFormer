@@ -2,8 +2,6 @@
 This is the readme file for the code release of "3D Human Pose Estimation with Spatio-Temporal Criss-cross Attention" on PyTorch platform.
 Thank you for your interest, the code and checkpoints are being updated.
 
-![Alt Text](demo.gif)
-
 ## The released codes include:
     checkpoint/:                        the folder for model weights of STCFormer.
     dataset/:                           the folder for data loader.
