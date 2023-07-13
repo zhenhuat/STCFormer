@@ -96,6 +96,7 @@ Our code refers to the following repositories.
 [StridedTransformer-Pose3D](https://github.com/Vegetebird/StridedTransformer-Pose3D) \
 [P-STMO](https://github.com/paTRICK-swk/P-STMO/tree/main) \
 [MHFormer](https://github.com/Vegetebird/MHFormer) \
-[MixSTE](https://github.com/JinluZhang1126/MixSTE) 
+[MixSTE](https://github.com/JinluZhang1126/MixSTE) \
+[FTCM](https://github.com/zhenhuat/FTCM)
 
 We thank the authors for releasing their codes.
