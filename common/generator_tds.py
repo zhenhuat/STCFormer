@@ -93,8 +93,13 @@ class ChunkedGenerator:
     def get_batch(self, seq_i, start_3d, end_3d, flip, reverse):
         subject,action,cam_index = seq_i
         seq_name = (subject,action,int(cam_index))
-        start_2d = start_3d - self.pad * self.tds - self.causal_shift
-        end_2d = end_3d + self.pad * self.tds - self.causal_shift
+        if self.chunk_length == 1:
+        	start_2d = start_3d - self.pad * self.tds - self.causal_shift
+        	end_2d = end_3d + self.pad * self.tds - self.causal_shift
+        else:
+            mid = end_3d - self.pad
+            start_2d = mid - self.pad * self.tds - self.causal_shift-1
+            end_2d = mid + self.pad * self.tds - self.causal_shift
 
         seq_2d = self.poses_2d[seq_name].copy()
         low_2d = max(start_2d, 0)
