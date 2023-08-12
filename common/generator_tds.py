@@ -67,6 +67,7 @@ class ChunkedGenerator:
         self.out_all = out_all
         self.MAE = MAE
         self.tds = tds
+        self.chunk_length = chunk_length
 
     def num_frames(self):
         return self.num_batches * self.batch_size
