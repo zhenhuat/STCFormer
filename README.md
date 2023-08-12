@@ -40,7 +40,7 @@ We set up the MPI-INF-3DHP dataset in the same way as [P-STMO](https://github.co
 ### Human 3.6M
 For the training stage, please run:
 ```bash
-python run_stc.py -f 27 -b 128  --train 1 --layers 6 -s 9
+python run_stc.py -f 27 -b 128  --train 1 --layers 6 -s 3
 ```
 For the testing stage, please run:
 ```bash
