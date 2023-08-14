@@ -113,7 +113,7 @@ class STC_ATTENTION(nn.Module):
         v_s = rearrange(v_s, 'b (h c) t s   -> (b h t) s c ', h=self.head)  # b*h*t,s,c//2//h
         v_t = rearrange(v_t, 'b (h c) t s  -> (b h s) t c ', h=self.head)  # b*h*s,t,c//2//h
 
-        x_s = att_s @ v_s + sep2_s + 0.001 * self.drop(sep_s)  # b*h*t,s,c//2//h
+        x_s = att_s @ v_s + sep2_s + 0.0001 * self.drop(sep_s)  # b*h*t,s,c//2//h
         x_t = att_t @ v_t + sep2_t  # b*h,t,c//h                # b*h*s,t,c//2//h
 
         x_s = rearrange(x_s, '(b h t) s c -> b h t s c ', h=self.head, t=t)  # b*h*t,s,c//h//2 -> b,h,t,s,c//h//2 
