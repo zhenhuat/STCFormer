@@ -12,7 +12,7 @@ import copy
 from IPython import embed
 
 sys.path.append(os.getcwd())
-from model.mhformer import Model
+from model.stcformer import Model
 from common.camera import *
 
 import matplotlib
@@ -23,6 +23,8 @@ import matplotlib.gridspec as gridspec
 plt.switch_backend('agg')
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 def show2Dpose(kps, img):
     connections = [[0, 1], [1, 2], [2, 3], [0, 4], [4, 5],
@@ -129,9 +131,9 @@ def showimage(ax, img):
 
 def get_pose3D(video_path, output_dir):
     args, _ = argparse.ArgumentParser().parse_known_args()
-    args.layers, args.channel, args.d_hid, args.frames = 3, 512, 1024, 351
+    args.layers, args.channel, args.d_hid, args.frames = 6, 256, 256, 27
     args.pad = (args.frames - 1) // 2
-    args.previous_dir = 'checkpoint/pretrained/351'
+    args.previous_dir = './checkpoint/'
     args.n_joints, args.out_joints = 17, 17
 
     ## Reload 
@@ -139,6 +141,7 @@ def get_pose3D(video_path, output_dir):
 
     model_dict = model.state_dict()
     # Put the pretrained model of MHFormer in 'checkpoint/pretrained/351'
+    # print(os.path.join(args.previous_dir, '*.pth'))
     model_path = sorted(glob.glob(os.path.join(args.previous_dir, '*.pth')))[0]
 
     pre_dict = torch.load(model_path)
@@ -196,12 +199,15 @@ def get_pose3D(video_path, output_dir):
         output_3D_non_flip = model(input_2D[:, 0])
         output_3D_flip     = model(input_2D[:, 1])
 
+        # print(output_3D_non_flip.shape)
+        # exit()
+
         output_3D_flip[:, :, :, 0] *= -1
         output_3D_flip[:, :, joints_left + joints_right, :] = output_3D_flip[:, :, joints_right + joints_left, :] 
 
         output_3D = (output_3D_non_flip + output_3D_flip) / 2
 
-        output_3D = output_3D[0:, args.pad].unsqueeze(1) 
+        # output_3D = output_3D[0:, args.pad].unsqueeze(1) 
         output_3D[:, :, 0, :] = 0
         post_out = output_3D[0, 0].cpu().detach().numpy()
 
@@ -274,9 +280,11 @@ def get_pose3D(video_path, output_dir):
         plt.savefig(output_dir_pose + str(('%04d'% i)) + '_pose.png', dpi=200, bbox_inches = 'tight')
 
 if __name__ == "__main__":
+    os.environ["CUDA_VISIBLE_DEVICES"] = "6"
     parser = argparse.ArgumentParser()
     parser.add_argument('--video', type=str, default='sample_video.mp4', help='input video')
     parser.add_argument('--gpu', type=str, default='0', help='input video')
+    # parser.add_argument('--previous_dir',type=str, default='no_refine_6_4406', help='checkpoint')
     args = parser.parse_args()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
