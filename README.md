@@ -77,6 +77,19 @@ The pre-trained models and codes for STCFormer are currently undergoing updates.
  python run_3dhp_stc.py --train 0 --frames 81  -b 128  -s 1  --reload 1 --previous_dir ./checkpoint/model_81_STMO/no_refine_8_2310.pth
 ```
 
+
+### In the Wild Video
+Accroding MHFormer, make sure to download the YOLOv3 and HRNet pretrained models [here](https://drive.google.com/drive/folders/1_ENAMOsPM7FXmdYRbkwbFHgzQq_B_NQA) and put it in the './demo/lib/checkpoint' directory firstly. Then, you need to put your in-the-wild videos in the './demo/video' directory.
+
+You can modify the 'get_pose3D' function in the 'vis.py' script according to your needs, including the checkpoint and model parameters, and then execute the following command:
+
+```bash
+ python demo/vis.py --video sample_video.mp4
+```
+
+
+
+
 ## Citation
 
 If you find this repo useful, please consider citing our paper:
