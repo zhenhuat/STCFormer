@@ -198,7 +198,7 @@ if __name__ == "__main__":
     output = net(inputs)
     print(output.size())
     from thop import profile
-
-    flops, params = profile(net, inputs=(inputs,))
-    print(flops)
+    # flops = 2*macs
+    macs, params = profile(net, inputs=(inputs,))
+    print(2*macs)
     print(params)
